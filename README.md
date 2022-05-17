@@ -6,6 +6,6 @@ Drugs.com shared workflows for CI/CD pipelines
 
 ```yaml
 jobs:
-  new-release:
-    uses: drugscom/shared-workflows/.github/workflows/CD-new-release.yml@v1
+  bump-version:
+    uses: drugscom/shared-workflows/.github/workflows/node-bump-version.yml@v1
 ```
