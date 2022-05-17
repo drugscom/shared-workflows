@@ -7,7 +7,7 @@ name: Node.js
       node-version:
         description: Node.js version to use
         default: 16
-        required: true
+        required: false
         type: number
 
 concurrency:
