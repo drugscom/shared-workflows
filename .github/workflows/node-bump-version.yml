@@ -11,8 +11,7 @@ name: Node.js
         type: number
 
 concurrency:
-  group: node-bump-version/${{ github.repo }}/${{ github.ref }}
-  cancel-in-progress: true
+  group: ${{ github.repo }}/${{ github.ref }}
 
 permissions:
   contents: write
