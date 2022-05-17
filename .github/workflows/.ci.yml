@@ -20,7 +20,7 @@ env:
 
 jobs:
   tests:
-    name: Test
+    name: Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
