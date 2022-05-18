@@ -5,7 +5,7 @@ name: CD
   workflow_call:
 
 concurrency:
-  group: CI-docker-push/${{ github.repo }}/${{ github.ref }}
+  group: CD-docker-push/${{ github.repo }}/${{ github.ref }}
   cancel-in-progress: true
 
 permissions:

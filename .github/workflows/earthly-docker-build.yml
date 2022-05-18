@@ -1,0 +1,25 @@
+---
+name: CI
+
+'on':
+  workflow_call:
+
+concurrency:
+  group: CI-docker-build/${{ github.repo }}/${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  EARTHLY_CI: 'true'
+  FORCE_COLOR: 1
+
+jobs:
+  docker-build:
+    name: Build Docker image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Earthly
+        uses: drugscom/setup-earthly-action@v1
+      - name: Publish container image
+        run: earthly +docker
