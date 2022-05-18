@@ -21,5 +21,5 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Earthly
         uses: drugscom/setup-earthly-action@v1
-      - name: Publish container image
+      - name: Build container image
         run: earthly +docker
