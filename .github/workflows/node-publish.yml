@@ -33,6 +33,9 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
           registry-url: ${{ inputs.registry-url }}
+      - run: npm ci
+      - name: Build package
+        run: npm run --if-present build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm-auth-token }}
