@@ -27,7 +27,7 @@ jobs:
         uses: drugscom/setup-earthly-action@v1
       - name: Get Docker image tags
         id: metadata
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: ghcr.io/${{ github.repository }}
           tags: |
