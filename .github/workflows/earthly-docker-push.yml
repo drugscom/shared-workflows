@@ -39,7 +39,7 @@ jobs:
         id: docker
         run: echo "::set-output name=args::--IMAGE_NAME='${{ join(fromJSON(steps.metadata.outputs.json).tags, ' ') }}'"
       - name: Log into registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
