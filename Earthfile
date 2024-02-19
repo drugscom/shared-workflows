@@ -1,6 +1,6 @@
 VERSION 0.6
 
-FROM alpine:3.15
+FROM alpine:3.19
 WORKDIR /app
 
 all:

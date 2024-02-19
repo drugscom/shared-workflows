@@ -6,7 +6,7 @@ name: Node.js
     inputs:
       node-version:
         description: Version Spec of the Node.js version to use
-        default: '16.x'
+        default: '20.x'
         required: false
         type: string
       registry-url:
