@@ -37,7 +37,7 @@ jobs:
             type=ref,event=branch
       - name: Get docker args
         id: docker
-        run: echo "::set-output name=args::--IMAGE_NAME='${{ join(fromJSON(steps.metadata.outputs.json).tags, ' ') }}'"
+        run: echo "args=--IMAGE_NAME='${{ join(fromJSON(steps.metadata.outputs.json).tags, ' ') }}'" >> $GITHUB_OUTPUT
       - name: Log into registry
         uses: docker/login-action@v3
         with:
